@@ -1,10 +1,7 @@
 package GrupoI_Examen2_Caso2;
 
-public class GrupoI_Examen2_Caso2{
+public class GrupoI_Examen2_Caso2 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         /*
         MessageSubscriberOne s1= new MessageSubscriberOne();
@@ -21,35 +18,29 @@ public class GrupoI_Examen2_Caso2{
         p.addReaders(s3);
         p.notifyReaders(new Message(" Second Message "));
         **/
-        subscriptorCostoGratuito s1= new subscriptorCostoGratuito();
+        subscriptorCostoGratuito s1 = new subscriptorCostoGratuito();
         subscriptorDe_6a49_pantallas s2 = new subscriptorDe_6a49_pantallas();
-        IObserver s3= new subscriptor_pantallas_incrementadas(5);
-        
-        PublicadorPantallas p= new PublicadorPantallas();
+        IObserver s3 = new subscriptor_pantallas_incrementadas(5);
+
+        PublicadorPantallas p = new PublicadorPantallas();
         p.addSusbcriber(s1);
         p.addSusbcriber(s2);
         p.addSusbcriber(s3);
-        Cliente cli=new Cliente(7);
-        System.out.println("Estado en el primer mes"+"\n");
+        Cliente cli = new Cliente(7);
+        System.out.println("Estado en el primer mes" + "\n");
         p.notifySubscriber(cli);
-        
-        System.out.println("Estado en el segundo mes"+"\n");
-        //SEGUNDO MES
+        System.out.println("Estado en el segundo mes" + "\n");
         s3 = new subscriptor_pantallas_disminuidas(10);
-          p.addSusbcriber(s3);
-          cli.setNumPantallas(4);
-  
+        p.addSusbcriber(s3);
+        cli.setNumPantallas(4);
+
         p.notifySubscriber(cli);
-        
-        
-        //
-        System.out.println("Estado en el Tercer mes"+"\n");
-        //SEGUNDO MES
+        System.out.println("Estado en el Tercer mes" + "\n");
         s3 = new subscriptorCostoGratuito();
-          p.addSusbcriber(s3);
-           System.out.println("Despues de que el cliente retira el servicio"+"\n");
-          cli.setNumPantallas(0);//Retiro el servicio
+        p.addSusbcriber(s3);
+        System.out.println("Despues de que el cliente retira el servicio" + "\n");
+        cli.setNumPantallas(0);
         p.notifySubscriber(cli);
     }
-    
+
 }

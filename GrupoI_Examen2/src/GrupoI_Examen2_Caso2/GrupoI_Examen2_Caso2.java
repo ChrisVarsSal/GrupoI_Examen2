@@ -18,25 +18,25 @@ public class GrupoI_Examen2_Caso2 {
         p.addReaders(s3);
         p.notifyReaders(new Message(" Second Message "));
         **/
-        subscriptorCostoGratuito s1 = new subscriptorCostoGratuito();
-        subscriptorDe_6a49_pantallas s2 = new subscriptorDe_6a49_pantallas();
-        IObserver s3 = new subscriptor_pantallas_incrementadas(5);
+        Tier1 s1 = new Tier1();
+        Tier2 s2 = new Tier2();
+        IObserver s3 = new SubIncreasedScreens(5);
 
-        PublicadorPantallas p = new PublicadorPantallas();
+        Screens p = new Screens();
         p.addSusbcriber(s1);
         p.addSusbcriber(s2);
         p.addSusbcriber(s3);
-        Cliente cli = new Cliente(7);
+        Client cli = new Client(7);
         System.out.println("Estado en el primer mes" + "\n");
         p.notifySubscriber(cli);
         System.out.println("Estado en el segundo mes" + "\n");
-        s3 = new subscriptor_pantallas_disminuidas(10);
+        s3 = new SubTinyScreens(10);
         p.addSusbcriber(s3);
         cli.setNumPantallas(4);
 
         p.notifySubscriber(cli);
         System.out.println("Estado en el Tercer mes" + "\n");
-        s3 = new subscriptorCostoGratuito();
+        s3 = new Tier1();
         p.addSusbcriber(s3);
         System.out.println("Despues de que el cliente retira el servicio" + "\n");
         cli.setNumPantallas(0);

@@ -3,7 +3,7 @@ package GrupoI_Examen2_Caso2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PublicadorPantallas implements ISubject {
+public class Screens implements ISubject {
 
     private List<IObserver> subscriptores;
 
@@ -13,11 +13,11 @@ public class PublicadorPantallas implements ISubject {
         this.subscriptores.add(subs);
     }
 
-    public PublicadorPantallas(List<IObserver> subscriptores) {
+    public Screens(List<IObserver> subscriptores) {
         this.subscriptores = subscriptores;
     }
 
-    public PublicadorPantallas() {
+    public Screens() {
         this.subscriptores = new ArrayList();
     }
 
@@ -27,7 +27,7 @@ public class PublicadorPantallas implements ISubject {
     }
 
     @Override
-    public void notifySubscriber(Cliente cli) {
+    public void notifySubscriber(Client cli) {
         for (IObserver o : subscriptores) {
             o.update(cli);
         }

@@ -1,11 +1,11 @@
 package GrupoI_Examen2_Caso2;
 
-public class Cliente {
+public class Client {
 
     private int numPantallas;
     private double montoAPagar;
 
-    public Cliente(int numPantallas) {
+    public Client(int numPantallas) {
         this.numPantallas = numPantallas;
     }
 

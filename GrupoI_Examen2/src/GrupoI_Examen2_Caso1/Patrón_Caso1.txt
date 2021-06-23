@@ -1,0 +1,6 @@
+Patrón utilizado: Observer
+La razón por la que se decidió en utilizar el patrón observer, es debido a que este patrón 
+permite la definición de un mecanismo de suscripción para poder notificar a diversos objetos sobre 
+cualquier evento que le pueda llegar a suceder al objeto que están observando. Este patrón 
+es de gran utilidad para este primer caso debido a que en este se hace uso de un sistema de 
+suscripciones.   

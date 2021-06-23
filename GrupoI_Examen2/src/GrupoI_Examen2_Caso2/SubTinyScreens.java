@@ -1,15 +1,15 @@
 package GrupoI_Examen2_Caso2;
 
-public class subscriptor_pantallas_disminuidas extends IObserver {
+public class SubTinyScreens extends IObserver {
 
     private int pantallas = 0;
 
-    public subscriptor_pantallas_disminuidas(int pantallas) {
+    public SubTinyScreens(int pantallas) {
         this.pantallas = pantallas;
     }
 
     @Override
-    public void update(Cliente cli) {
+    public void update(Client cli) {
         double calcularAumento = 0;
         calcularAumento = cli.getMontoAPagar() * 0.05;
         if (cli.getNumPantallas() < pantallas) {

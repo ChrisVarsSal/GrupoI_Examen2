@@ -1,34 +1,38 @@
 package GrupoI_Examen2_Caso2;
 
 public class Client {
+    private String name;
+    int devices,prevDevice;
 
-    private int numPantallas;
-    private double montoAPagar;
-
-    public Client(int numPantallas) {
-        this.numPantallas = numPantallas;
+    public Client(String name, int devices) {
+        this.name = name;
+        this.devices = devices;
+        this.prevDevice = 0;
     }
 
-    public int getNumPantallas() {
-        return numPantallas;
+    public String getName() {
+        return name;
     }
 
-    public void setNumPantallas(int numPantallas) {
-        this.numPantallas = numPantallas;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public double getMontoAPagar() {
-        return montoAPagar;
+    public int getDevices() {
+        return devices;
     }
 
-    public void setMontoAPagar(double montoAPagar) {
-        this.montoAPagar = montoAPagar;
+    public void setDevices(int devices) {
+        this.prevDevice = this.devices;
+        this.devices = devices;
     }
 
-    void imprimirDatos() {
-        System.out.println("Datos del cliente a facturar" + "\n");
-        System.out.println(" Numero de pantallas " + this.numPantallas + "\n");
-        System.out.println(" Monto a Facturar :" + this.montoAPagar + "\n");
-
+    public int getPrevDevice() {
+        return prevDevice;
     }
+
+
+    
+    
+    
 }

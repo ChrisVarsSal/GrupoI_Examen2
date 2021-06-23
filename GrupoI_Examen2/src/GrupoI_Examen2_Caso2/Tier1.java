@@ -1,15 +1,18 @@
-//Free sub
 package GrupoI_Examen2_Caso2;
 
-public class Tier1 extends IObserver {
-
+public class Tier1 implements ITier {
+    private double price = 0.1;
     @Override
-    public void update(Client cli) {
-        if (cli.getNumPantallas() <= 5) {
-            System.out.println("Subscriptor costo Gratuito" + "\n");
-            System.out.println("Costo Final " + "Gratuito " + "\n");
-        }
-
+    public double calcDebt(int x) {
+        return x*price;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    
 }

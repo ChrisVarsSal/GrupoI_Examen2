@@ -1,0 +1,7 @@
+Patrón utilizado: Strategy
+Se seleccionó el patrón Strategy para la realización del segundo caso de este examen, ya que 
+este patrón permite la definición de una familia de algoritmos, y a su vez cada uno de estos
+puede ser colocado en una clase separada, esto permite que hacer que sus objetos sean 
+intercambiables. Este patrón es de gran utilidad para este caso, debido a que por medio de 
+este, fue posible crear la familia de clases Tier, las cuales están implementadas cada una
+en una clase distinta.   
